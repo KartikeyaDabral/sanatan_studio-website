@@ -1,0 +1,37 @@
+/* ============================================================
+   Skeleton
+   ============================================================ */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-secondary) 25%,
+    var(--bg-tertiary) 50%,
+    var(--bg-secondary) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.8s ease-in-out infinite;
+}
+
+.skeleton--text {
+  border-radius: var(--radius-sm);
+}
+
+.skeleton--rectangular {
+  border-radius: var(--radius-md);
+}
+
+.skeleton--circular {
+  border-radius: var(--radius-full);
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}

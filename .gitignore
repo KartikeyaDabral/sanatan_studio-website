@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+.next/
+build/
+.turbo/
+
+# Environment
+.env
+.env.local
+.env.production
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Debug
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# Prisma
+packages/database/prisma/*.db
+
+# 3D assets (large files)
+*.glb
+*.gltf
+
+# Coverage
+coverage/

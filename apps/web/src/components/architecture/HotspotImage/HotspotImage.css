@@ -1,0 +1,202 @@
+/* ============================================================
+   Hotspot Image (Spatial Object Marker)
+   ============================================================ */
+
+.hotspot-figure {
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.hotspot-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-stone-light);
+  width: 100%;
+}
+
+.hotspot-container--16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.hotspot-container--4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.hotspot-container--3-2 {
+  aspect-ratio: 3 / 2;
+}
+
+.hotspot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- Node / Hotspot Point ---- */
+
+.hotspot-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.hotspot-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hotspot-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-ivory);
+  border: 2px solid var(--color-charcoal);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 2;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.hotspot-button:hover .hotspot-dot {
+  transform: scale(1.25);
+  background-color: var(--color-terracotta);
+}
+
+.hotspot-ping {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  animation: hotspot-pulse 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+  z-index: 1;
+}
+
+@keyframes hotspot-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* ---- Card Popover ---- */
+
+.hotspot-card {
+  position: absolute;
+  z-index: 20;
+  background-color: rgba(26, 26, 24, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  width: 240px;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  gap: var(--space-3);
+  animation: hotspot-fade-in var(--duration-fast) var(--ease-out);
+}
+
+@keyframes hotspot-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hotspot-card--right {
+  left: 28px;
+}
+
+.hotspot-card--left {
+  right: 28px;
+}
+
+.hotspot-card--bottom {
+  top: 0;
+}
+
+.hotspot-card--top {
+  bottom: 0;
+}
+
+.hotspot-card__thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-stone-dark);
+  flex-shrink: 0;
+}
+
+.hotspot-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.hotspot-card__eyebrow {
+  font-family: var(--font-body);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-terracotta);
+  margin-bottom: 2px;
+}
+
+.hotspot-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-ivory);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 2px 0;
+}
+
+.hotspot-card__price {
+  font-size: var(--text-xs);
+  color: var(--color-stone-light);
+  margin: 0 0 4px 0;
+}
+
+.hotspot-card__link {
+  font-size: 11px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-ivory);
+  text-decoration: none;
+  font-weight: var(--weight-medium);
+  transition: color var(--duration-fast);
+}
+
+.hotspot-card__link:hover {
+  color: var(--color-terracotta);
+}
+
+.hotspot-caption {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-top: var(--space-3);
+  text-align: center;
+}

@@ -1,0 +1,68 @@
+/* ============================================================
+   SANATAN — Base Styles
+   ============================================================
+   Global body styles, root element setup, and fundamental
+   element styling.
+   ============================================================ */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Selection ---- */
+
+::selection {
+  background-color: var(--color-walnut);
+  color: var(--color-ivory);
+}
+
+/* ---- Scrollbar (subtle) ---- */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-stone);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-stone-dark);
+}
+
+/* ---- Links ---- */
+
+a {
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+/* ---- Horizontal Rule ---- */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: var(--space-8) 0;
+}
+
+/* ---- Image defaults ---- */
+
+img {
+  height: auto;
+  font-style: italic; /* Fallback for alt text styling */
+}

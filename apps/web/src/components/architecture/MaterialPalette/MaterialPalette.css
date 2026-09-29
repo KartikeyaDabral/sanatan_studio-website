@@ -1,0 +1,126 @@
+/* ============================================================
+   Material Palette
+   ============================================================ */
+
+.material-palette {
+  padding: var(--space-12) 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.material-palette__header {
+  margin-bottom: var(--space-8);
+  max-width: 600px;
+}
+
+.material-palette__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.material-palette__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.material-palette__subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.material-palette__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .material-palette__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .material-palette__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---- Material Card ---- */
+
+.material-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.material-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-stone);
+}
+
+.material-card__indicator {
+  margin-bottom: var(--space-3);
+}
+
+.material-card__category {
+  font-size: 11px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-family: var(--font-body);
+}
+
+.material-card__name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.material-card__description {
+  font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-4) 0;
+  flex: 1;
+}
+
+.material-card__usage {
+  font-size: 11px;
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.material-card__usage-label {
+  font-weight: var(--weight-medium);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+}
+
+.material-card__usage-value {
+  color: var(--text-primary);
+}

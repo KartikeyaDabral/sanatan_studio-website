@@ -1,0 +1,131 @@
+// ============================================================
+// Mock Data: Products (Furniture)
+// ============================================================
+
+import type { ProductDetail, ProductSummary } from '@sanatan/types';
+
+export const MOCK_PRODUCTS: ProductDetail[] = [
+  {
+    id: 'prod-001',
+    slug: 'aria-lounge-chair',
+    title: 'Aria Lounge Chair',
+    description: 'A lounge chair that embodies the quiet geometry of Casa Aria. Low-slung and generous, it invites long afternoons with a book or a conversation that stretches into evening.',
+    story: 'The Aria was born from a single piece of walnut that the carpenter refused to cut. Its natural curve became the backrest; the grain dictated the armrests. Each chair is slightly different — the wood decides.',
+    price: 85000,
+    currency: 'INR',
+    categoryId: 'cat-001',
+    category: { id: 'cat-001', slug: 'seating', name: 'Seating', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    designerId: 'des-001',
+    designer: { id: 'des-001', slug: 'anara-interiors', name: 'Anara Interiors', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    manufacturerName: 'Sanatan Workshop',
+    status: 'ACTIVE',
+    featured: true,
+    tags: ['Lounge', 'Walnut', 'Handcrafted'],
+    images: [
+      { id: 'pi-001', productId: 'prod-001', url: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1200&h=1200&fit=crop&q=80', altText: 'Aria Lounge Chair — walnut, front view', sortOrder: 0 },
+      { id: 'pi-002', productId: 'prod-001', url: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=1200&h=1200&fit=crop&q=80', altText: 'Aria Lounge Chair — detail of walnut grain', sortOrder: 1 },
+      { id: 'pi-003', productId: 'prod-001', url: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&h=1200&fit=crop&q=80', altText: 'Aria Lounge Chair — in situ', sortOrder: 2 },
+    ],
+    variants: [
+      { id: 'var-001', productId: 'prod-001', sku: 'ALC-WAL-01', label: 'Walnut', material: 'Walnut', color: 'Natural Walnut', colorHex: '#6B5438', dimensions: 'W 75 × D 82 × H 74 cm', weight: '18 kg', price: 85000, currency: 'INR', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+      { id: 'var-002', productId: 'prod-001', sku: 'ALC-TEA-01', label: 'Teak', material: 'Teak', color: 'Aged Teak', colorHex: '#8B6F4E', dimensions: 'W 75 × D 82 × H 74 cm', weight: '17 kg', price: 78000, currency: 'INR', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    ],
+    projects: [
+      { id: 'proj-001', slug: 'casa-aria', title: 'Casa Aria', location: 'Ahmedabad, India', year: 2026, coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop&q=80' },
+    ],
+    relatedProducts: [],
+    createdAt: '2024-01-15T00:00:00Z',
+    updatedAt: '2024-01-15T00:00:00Z',
+  },
+  {
+    id: 'prod-002',
+    slug: 'sthaan-dining-table',
+    title: 'Sthaan Dining Table',
+    description: 'A dining table carved from a single slab of aged teak. The live edges are preserved, the surface hand-planed to reveal the wood\'s inner character. Seats eight comfortably.',
+    story: 'Sthaan means "place" — and this table creates one. It was designed for Casa Aria\'s dining room but has since found its way into homes across the country. The teak comes from responsibly sourced heritage timbers.',
+    price: 245000,
+    currency: 'INR',
+    categoryId: 'cat-002',
+    category: { id: 'cat-002', slug: 'tables', name: 'Tables', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    designerId: 'des-001',
+    designer: { id: 'des-001', slug: 'anara-interiors', name: 'Anara Interiors', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    manufacturerName: 'Sanatan Workshop',
+    status: 'ACTIVE',
+    featured: true,
+    tags: ['Dining', 'Teak', 'Live Edge', 'Handcrafted'],
+    images: [
+      { id: 'pi-010', productId: 'prod-002', url: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&h=1200&fit=crop&q=80', altText: 'Sthaan Dining Table — full view', sortOrder: 0 },
+      { id: 'pi-011', productId: 'prod-002', url: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=1200&h=1200&fit=crop&q=80', altText: 'Detail of live edge grain', sortOrder: 1 },
+    ],
+    variants: [
+      { id: 'var-010', productId: 'prod-002', sku: 'SDT-TEA-01', label: '8-Seater', material: 'Aged Teak', color: 'Natural', colorHex: '#A68B6B', dimensions: 'L 240 × W 100 × H 76 cm', weight: '85 kg', price: 245000, currency: 'INR', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+      { id: 'var-011', productId: 'prod-002', sku: 'SDT-TEA-02', label: '6-Seater', material: 'Aged Teak', color: 'Natural', colorHex: '#A68B6B', dimensions: 'L 200 × W 95 × H 76 cm', weight: '72 kg', price: 198000, currency: 'INR', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    ],
+    projects: [
+      { id: 'proj-001', slug: 'casa-aria', title: 'Casa Aria', location: 'Ahmedabad, India', year: 2026, coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop&q=80' },
+    ],
+    relatedProducts: [],
+    createdAt: '2024-02-10T00:00:00Z',
+    updatedAt: '2024-02-10T00:00:00Z',
+  },
+  {
+    id: 'prod-003',
+    slug: 'kund-floor-lamp',
+    title: 'Kund Floor Lamp',
+    description: 'Inspired by the geometries of Gujarati stepwells, this floor lamp casts patterned shadows that shift through the day. Brass and handmade paper combine ancient craft with contemporary form.',
+    price: 42000,
+    currency: 'INR',
+    categoryId: 'cat-003',
+    category: { id: 'cat-003', slug: 'lighting', name: 'Lighting', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    designerId: 'des-001',
+    designer: { id: 'des-001', slug: 'anara-interiors', name: 'Anara Interiors', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    status: 'ACTIVE',
+    featured: true,
+    tags: ['Lighting', 'Brass', 'Handcrafted'],
+    images: [
+      { id: 'pi-020', productId: 'prod-003', url: 'https://images.unsplash.com/photo-1507473885765-e6ed057ab6fe?w=1200&h=1200&fit=crop&q=80', altText: 'Kund Floor Lamp — brass and paper', sortOrder: 0 },
+    ],
+    variants: [
+      { id: 'var-020', productId: 'prod-003', sku: 'KFL-BRS-01', label: 'Brass', material: 'Brass + Handmade Paper', color: 'Antique Brass', colorHex: '#B8A078', dimensions: 'Ø 35 × H 165 cm', price: 42000, currency: 'INR', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    ],
+    projects: [],
+    relatedProducts: [],
+    createdAt: '2024-03-20T00:00:00Z',
+    updatedAt: '2024-03-20T00:00:00Z',
+  },
+  {
+    id: 'prod-004',
+    slug: 'vayu-side-table',
+    title: 'Vayu Side Table',
+    description: 'A side table in marble and brass that floats between presence and absence. The marble top — veined Makrana — rests on a minimal brass frame that almost disappears.',
+    price: 38000,
+    currency: 'INR',
+    categoryId: 'cat-002',
+    category: { id: 'cat-002', slug: 'tables', name: 'Tables', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    status: 'ACTIVE',
+    featured: false,
+    tags: ['Side Table', 'Marble', 'Brass'],
+    images: [
+      { id: 'pi-030', productId: 'prod-004', url: 'https://images.unsplash.com/photo-1532372320978-9b1d0b507806?w=1200&h=1200&fit=crop&q=80', altText: 'Vayu Side Table — marble and brass', sortOrder: 0 },
+    ],
+    variants: [
+      { id: 'var-030', productId: 'prod-004', sku: 'VST-MAR-01', label: 'Makrana Marble', material: 'Makrana Marble + Brass', color: 'White', colorHex: '#F0EDE8', dimensions: 'Ø 45 × H 55 cm', price: 38000, currency: 'INR', createdAt: '2024-01-01T00:00:00Z', updatedAt: '2024-01-01T00:00:00Z' },
+    ],
+    projects: [],
+    relatedProducts: [],
+    createdAt: '2024-04-05T00:00:00Z',
+    updatedAt: '2024-04-05T00:00:00Z',
+  },
+];
+
+export const MOCK_PRODUCT_SUMMARIES: ProductSummary[] = MOCK_PRODUCTS.map((p) => ({
+  id: p.id,
+  slug: p.slug,
+  title: p.title,
+  price: p.price,
+  currency: p.currency,
+  coverImage: p.images[0]?.url,
+  coverImageAlt: p.images[0]?.altText,
+  designer: p.designer ? { name: p.designer.name, slug: p.designer.slug } : undefined,
+  category: p.category ? { name: p.category.name, slug: p.category.slug } : undefined,
+}));
